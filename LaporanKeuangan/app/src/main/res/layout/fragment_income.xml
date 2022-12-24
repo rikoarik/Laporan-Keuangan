@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    android:scrollbars="horizontal"
+    tools:context=".Fragment.IncomeFragment"
+    android:paddingTop="20dp"
+    android:paddingRight="40dp"
+    android:paddingLeft="40dp">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Category Of Income"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/kategoriin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:backgroundTint="#F8DF93"
+            android:entries="@array/kategoriincome"
+            android:background="@drawable/rounded_layout"
+            android:scrollbarStyle="insideOverlay"
+            android:splitMotionEvents="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kategoriin"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#F8DF93"
+            android:background="@drawable/rounded_layout"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/datein"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:layout_marginLeft="20dp"
+                android:inputType="date"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent" />
+            <ImageButton
+                android:id="@+id/btdate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_baseline_date_range_24"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Amount"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="NotSibling" />
+
+        <EditText
+            android:id="@+id/saldoin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_layout"
+            android:backgroundTint="#F8DF93"
+
+            android:ems="10"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Notes"
+            android:textColor="@color/black"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saldoin"
+            tools:ignore="MissingConstraints" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/rounded_layout"
+            android:backgroundTint="#F8DF93"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:layout_editor_absoluteX="16dp">
+
+            <EditText
+                android:id="@+id/notesaddin"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Enter notes or descriptions"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="#6A6868"
+                app:placeholderTextColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imagein"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/notesaddin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <ImageButton
+                android:id="@+id/camerain"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/notesaddin"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="110dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/imagein"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_baseline_photo_camera_24" />
+
+            <ImageButton
+                android:id="@+id/filein"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/notesaddin"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="110dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/camerain"
+                android:backgroundTint="#00000000"
+                android:src="@drawable/ic_baseline_attach_file_24" />
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btsave"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/teal_200"
+            android:elevation="20dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Save"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>

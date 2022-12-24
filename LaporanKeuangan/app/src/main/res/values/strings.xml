@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Laporan Keuangan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="saldo">700000</string>
+    <integer name="saldonow">5555</integer>
+    <string-array name="kategorioutcome">
+        <item>Food and Beverage</item>
+        <item>Entertainment</item>
+        <item>Fashion</item>
+        <item>Self Care</item>
+        <item>Necessity</item>
+        <item>Groceries</item>
+        <item>School</item>
+        <item>Sport</item>
+        <item>Healt</item>
+        <item>Transport</item>
+        <item>Accommodation</item>
+        <item>Phone</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="kategoriincome">
+        <item>Salary</item>
+        <item>Bonus</item>
+        <item>Gift</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>
